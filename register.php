@@ -55,15 +55,12 @@ if (isset($_POST['registerButton']))
     {
         if (insertUser($_POST['username'], $_POST['fname'], $_POST['lname'],  $_POST['password']))
         {
-            $username = $_POST['username'];
-            setLoggedInUser($username);
-
             echo '<script type="text/javascript">
                         alert("User added.");
                   </script>';
 
             echo '<script type="text/javascript">
-                        window.location.replace("game.php");
+                        window.location.replace("index.php");
                   </script>';
         }
         else
